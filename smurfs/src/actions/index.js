@@ -7,7 +7,7 @@ export const ERROR = "ERROR";
 
 const url = "http://localhost:333/"
 
-export const getSMURFS = () => dispatch => {
+export const getSmurfs = () => dispatch => {
   dispatch({
     type: GET_SMURFS
   })
@@ -16,6 +16,26 @@ export const getSMURFS = () => dispatch => {
   .then(res => {
     dispatch({
       type: SMURFS_BACK,
+      payload: res.data
+    })
+  })
+  .catch(err => {
+    dispatch({
+      type: ERROR,
+      payload: err
+    })
+  })
+}
+
+export const addSmurf = smurf => dispatch => {
+  dispatch({
+    type: ADD_SMURF
+  })
+  axios
+  .post(`${url}smurfs`, smurf)
+  .then(res => {
+    dispatch({
+      type: SMURF_ADDED,
       payload: res.data
     })
   })
