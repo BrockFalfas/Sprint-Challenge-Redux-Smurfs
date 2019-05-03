@@ -5,7 +5,7 @@ export const ADD_SMURF = "ADD_SMURF";
 export const SMURF_ADDED = "SMURF_ADDED"; 
 export const ERROR = "ERROR";
 
-const url = "http://localhost:333/"
+const url = "http://localhost:3333/"
 
 export const getSmurfs = () => dispatch => {
   dispatch({
