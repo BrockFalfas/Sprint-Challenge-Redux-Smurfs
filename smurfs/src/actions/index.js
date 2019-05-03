@@ -1,6 +1,6 @@
 import axios from "axios"
 export const GET_SMURFS = "GET_SMURFS";
-export const SMURFS_BACK = "SMURFS_GOT";
+export const SMURFS_BACK = "SMURFS_BACK";
 export const ADD_SMURF = "ADD_SMURF";
 export const SMURF_ADDED = "SMURF_ADDED"; 
 export const ERROR = "ERROR";
